@@ -6,8 +6,17 @@
   <h2>Log in</h2>
   <form class="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" name="button">Log In</button>
 
+    <p>{{ form.username.label_tag }}</p>
+    {{ form.username }}
+
+    <p>{{ form.password.label_tag }}</p>
+    {{ form.password }}
+
+
+    <br><br>
+    <button type="submit" name="button">Log In</button>
   </form>
+
+  <p><a href="#">Lost password?</a></p>
 {% endblock %}
